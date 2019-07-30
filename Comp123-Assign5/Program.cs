@@ -8,6 +8,11 @@ namespace Comp123_Assign5
 {
     static class Program
     {
+        public static SplashScreen splashScreen;
+        public static StartForm startForm;
+        public static SelectForm selectForm;
+        public static ProductInfoForm productInfoForm;
+        public static OrderForm orderForm;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +21,14 @@ namespace Comp123_Assign5
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            orderForm = new OrderForm();
+            productInfoForm = new ProductInfoForm();
+            selectForm = new SelectForm();
+            splashScreen = new SplashScreen();
+            startForm = new StartForm();
+
+            Application.Run(new SplashScreen());
         }
     }
 }
