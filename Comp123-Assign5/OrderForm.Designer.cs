@@ -93,6 +93,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(784, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
@@ -110,19 +111,19 @@
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.printToolStripMenuItem.Text = "&Print";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(96, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.cancelButton_Click);
             // 
@@ -137,7 +138,7 @@
             // backToolStripMenuItem
             // 
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.backToolStripMenuItem.Text = "&Back";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.backButton_Click);
             // 
@@ -152,8 +153,9 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "&About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // computerSpecsGroupBox
             // 
@@ -185,36 +187,38 @@
             this.computerSpecsGroupBox.Controls.Add(this.cpuBrandTextBox);
             this.computerSpecsGroupBox.Controls.Add(this.memoryLabel);
             this.computerSpecsGroupBox.Controls.Add(this.memoryTextBox);
-            this.computerSpecsGroupBox.Location = new System.Drawing.Point(33, 150);
+            this.computerSpecsGroupBox.Location = new System.Drawing.Point(50, 150);
             this.computerSpecsGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.computerSpecsGroupBox.Name = "computerSpecsGroupBox";
             this.computerSpecsGroupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.computerSpecsGroupBox.Size = new System.Drawing.Size(729, 346);
+            this.computerSpecsGroupBox.Size = new System.Drawing.Size(694, 348);
             this.computerSpecsGroupBox.TabIndex = 3;
             this.computerSpecsGroupBox.TabStop = false;
             this.computerSpecsGroupBox.Text = "Computer Specs";
             // 
             // osTextBox
             // 
-            this.osTextBox.Location = new System.Drawing.Point(364, 67);
+            this.osTextBox.Enabled = false;
+            this.osTextBox.Location = new System.Drawing.Point(412, 66);
             this.osTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.osTextBox.Name = "osTextBox";
-            this.osTextBox.Size = new System.Drawing.Size(357, 31);
+            this.osTextBox.Size = new System.Drawing.Size(269, 26);
             this.osTextBox.TabIndex = 7;
             // 
             // conditionTextBox
             // 
-            this.conditionTextBox.Location = new System.Drawing.Point(364, 113);
+            this.conditionTextBox.Enabled = false;
+            this.conditionTextBox.Location = new System.Drawing.Point(415, 109);
             this.conditionTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.conditionTextBox.Name = "conditionTextBox";
-            this.conditionTextBox.Size = new System.Drawing.Size(96, 31);
+            this.conditionTextBox.Size = new System.Drawing.Size(267, 26);
             this.conditionTextBox.TabIndex = 8;
             // 
             // modelLabel
             // 
             this.modelLabel.AutoSize = true;
             this.modelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modelLabel.Location = new System.Drawing.Point(162, 26);
+            this.modelLabel.Location = new System.Drawing.Point(122, 21);
             this.modelLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.modelLabel.Name = "modelLabel";
             this.modelLabel.Size = new System.Drawing.Size(52, 20);
@@ -223,17 +227,18 @@
             // 
             // modelTextBox
             // 
-            this.modelTextBox.Location = new System.Drawing.Point(255, 19);
+            this.modelTextBox.Enabled = false;
+            this.modelTextBox.Location = new System.Drawing.Point(224, 18);
             this.modelTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.modelTextBox.Name = "modelTextBox";
-            this.modelTextBox.Size = new System.Drawing.Size(357, 31);
+            this.modelTextBox.Size = new System.Drawing.Size(269, 26);
             this.modelTextBox.TabIndex = 9;
             // 
             // lcdSizeLabel
             // 
             this.lcdSizeLabel.AutoSize = true;
             this.lcdSizeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lcdSizeLabel.Location = new System.Drawing.Point(235, 178);
+            this.lcdSizeLabel.Location = new System.Drawing.Point(219, 188);
             this.lcdSizeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lcdSizeLabel.Name = "lcdSizeLabel";
             this.lcdSizeLabel.Size = new System.Drawing.Size(76, 20);
@@ -242,17 +247,18 @@
             // 
             // lcdSizeTextBox
             // 
-            this.lcdSizeTextBox.Location = new System.Drawing.Point(315, 175);
+            this.lcdSizeTextBox.Enabled = false;
+            this.lcdSizeTextBox.Location = new System.Drawing.Point(307, 179);
             this.lcdSizeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.lcdSizeTextBox.Name = "lcdSizeTextBox";
-            this.lcdSizeTextBox.Size = new System.Drawing.Size(96, 31);
+            this.lcdSizeTextBox.Size = new System.Drawing.Size(96, 26);
             this.lcdSizeTextBox.TabIndex = 1;
             // 
             // osLabel
             // 
             this.osLabel.AutoSize = true;
             this.osLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.osLabel.Location = new System.Drawing.Point(308, 67);
+            this.osLabel.Location = new System.Drawing.Point(338, 69);
             this.osLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.osLabel.Name = "osLabel";
             this.osLabel.Size = new System.Drawing.Size(32, 20);
@@ -263,7 +269,7 @@
             // 
             this.manufacturerLabel.AutoSize = true;
             this.manufacturerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.manufacturerLabel.Location = new System.Drawing.Point(-4, 120);
+            this.manufacturerLabel.Location = new System.Drawing.Point(4, 109);
             this.manufacturerLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.manufacturerLabel.Name = "manufacturerLabel";
             this.manufacturerLabel.Size = new System.Drawing.Size(104, 20);
@@ -274,7 +280,7 @@
             // 
             this.conditionLabel.AutoSize = true;
             this.conditionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conditionLabel.Location = new System.Drawing.Point(264, 120);
+            this.conditionLabel.Location = new System.Drawing.Point(294, 109);
             this.conditionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.conditionLabel.Name = "conditionLabel";
             this.conditionLabel.Size = new System.Drawing.Size(76, 20);
@@ -283,25 +289,27 @@
             // 
             // manufacturerTextBox
             // 
-            this.manufacturerTextBox.Location = new System.Drawing.Point(102, 113);
+            this.manufacturerTextBox.Enabled = false;
+            this.manufacturerTextBox.Location = new System.Drawing.Point(126, 103);
             this.manufacturerTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.manufacturerTextBox.Name = "manufacturerTextBox";
-            this.manufacturerTextBox.Size = new System.Drawing.Size(94, 31);
+            this.manufacturerTextBox.Size = new System.Drawing.Size(120, 26);
             this.manufacturerTextBox.TabIndex = 10;
             // 
             // platformTextBox
             // 
-            this.platformTextBox.Location = new System.Drawing.Point(102, 60);
+            this.platformTextBox.Enabled = false;
+            this.platformTextBox.Location = new System.Drawing.Point(126, 54);
             this.platformTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.platformTextBox.Name = "platformTextBox";
-            this.platformTextBox.Size = new System.Drawing.Size(96, 31);
+            this.platformTextBox.Size = new System.Drawing.Size(120, 26);
             this.platformTextBox.TabIndex = 11;
             // 
             // platformLabel
             // 
             this.platformLabel.AutoSize = true;
             this.platformLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.platformLabel.Location = new System.Drawing.Point(26, 67);
+            this.platformLabel.Location = new System.Drawing.Point(33, 57);
             this.platformLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.platformLabel.Name = "platformLabel";
             this.platformLabel.Size = new System.Drawing.Size(68, 20);
@@ -312,7 +320,7 @@
             // 
             this.cpuNumberLabel.AutoSize = true;
             this.cpuNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpuNumberLabel.Location = new System.Drawing.Point(209, 231);
+            this.cpuNumberLabel.Location = new System.Drawing.Point(193, 238);
             this.cpuNumberLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cpuNumberLabel.Name = "cpuNumberLabel";
             this.cpuNumberLabel.Size = new System.Drawing.Size(102, 20);
@@ -321,33 +329,36 @@
             // 
             // cpuNumberTextBox
             // 
-            this.cpuNumberTextBox.Location = new System.Drawing.Point(315, 225);
+            this.cpuNumberTextBox.Enabled = false;
+            this.cpuNumberTextBox.Location = new System.Drawing.Point(307, 235);
             this.cpuNumberTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.cpuNumberTextBox.Name = "cpuNumberTextBox";
-            this.cpuNumberTextBox.Size = new System.Drawing.Size(96, 31);
+            this.cpuNumberTextBox.Size = new System.Drawing.Size(96, 26);
             this.cpuNumberTextBox.TabIndex = 1;
             // 
             // webcamTextBox
             // 
-            this.webcamTextBox.Location = new System.Drawing.Point(519, 172);
+            this.webcamTextBox.Enabled = false;
+            this.webcamTextBox.Location = new System.Drawing.Point(497, 182);
             this.webcamTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.webcamTextBox.Name = "webcamTextBox";
-            this.webcamTextBox.Size = new System.Drawing.Size(200, 31);
+            this.webcamTextBox.Size = new System.Drawing.Size(184, 26);
             this.webcamTextBox.TabIndex = 1;
             // 
             // gpuTypeTextBox
             // 
-            this.gpuTypeTextBox.Location = new System.Drawing.Point(519, 222);
+            this.gpuTypeTextBox.Enabled = false;
+            this.gpuTypeTextBox.Location = new System.Drawing.Point(497, 238);
             this.gpuTypeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.gpuTypeTextBox.Name = "gpuTypeTextBox";
-            this.gpuTypeTextBox.Size = new System.Drawing.Size(200, 31);
+            this.gpuTypeTextBox.Size = new System.Drawing.Size(184, 26);
             this.gpuTypeTextBox.TabIndex = 1;
             // 
             // cpuSpeedLabel
             // 
             this.cpuSpeedLabel.AutoSize = true;
             this.cpuSpeedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpuSpeedLabel.Location = new System.Drawing.Point(218, 281);
+            this.cpuSpeedLabel.Location = new System.Drawing.Point(202, 294);
             this.cpuSpeedLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cpuSpeedLabel.Name = "cpuSpeedLabel";
             this.cpuSpeedLabel.Size = new System.Drawing.Size(93, 20);
@@ -356,25 +367,27 @@
             // 
             // hddLabelTextBox
             // 
-            this.hddLabelTextBox.Location = new System.Drawing.Point(519, 278);
+            this.hddLabelTextBox.Enabled = false;
+            this.hddLabelTextBox.Location = new System.Drawing.Point(497, 291);
             this.hddLabelTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.hddLabelTextBox.Name = "hddLabelTextBox";
-            this.hddLabelTextBox.Size = new System.Drawing.Size(200, 31);
+            this.hddLabelTextBox.Size = new System.Drawing.Size(184, 26);
             this.hddLabelTextBox.TabIndex = 1;
             // 
             // cpuSpeedTextBox
             // 
-            this.cpuSpeedTextBox.Location = new System.Drawing.Point(315, 278);
+            this.cpuSpeedTextBox.Enabled = false;
+            this.cpuSpeedTextBox.Location = new System.Drawing.Point(307, 291);
             this.cpuSpeedTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.cpuSpeedTextBox.Name = "cpuSpeedTextBox";
-            this.cpuSpeedTextBox.Size = new System.Drawing.Size(96, 31);
+            this.cpuSpeedTextBox.Size = new System.Drawing.Size(96, 26);
             this.cpuSpeedTextBox.TabIndex = 1;
             // 
             // webcamLabel
             // 
             this.webcamLabel.AutoSize = true;
             this.webcamLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.webcamLabel.Location = new System.Drawing.Point(427, 172);
+            this.webcamLabel.Location = new System.Drawing.Point(421, 185);
             this.webcamLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.webcamLabel.Name = "webcamLabel";
             this.webcamLabel.Size = new System.Drawing.Size(72, 20);
@@ -385,7 +398,7 @@
             // 
             this.gpuTypeLabel.AutoSize = true;
             this.gpuTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpuTypeLabel.Location = new System.Drawing.Point(427, 225);
+            this.gpuTypeLabel.Location = new System.Drawing.Point(411, 238);
             this.gpuTypeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gpuTypeLabel.Name = "gpuTypeLabel";
             this.gpuTypeLabel.Size = new System.Drawing.Size(82, 20);
@@ -396,7 +409,7 @@
             // 
             this.cpuTypeLabel.AutoSize = true;
             this.cpuTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpuTypeLabel.Location = new System.Drawing.Point(14, 281);
+            this.cpuTypeLabel.Location = new System.Drawing.Point(16, 294);
             this.cpuTypeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cpuTypeLabel.Name = "cpuTypeLabel";
             this.cpuTypeLabel.Size = new System.Drawing.Size(80, 20);
@@ -407,7 +420,7 @@
             // 
             this.hddLabel.AutoSize = true;
             this.hddLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hddLabel.Location = new System.Drawing.Point(427, 281);
+            this.hddLabel.Location = new System.Drawing.Point(405, 294);
             this.hddLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hddLabel.Name = "hddLabel";
             this.hddLabel.Size = new System.Drawing.Size(88, 20);
@@ -416,17 +429,18 @@
             // 
             // cpuTypeTextBox
             // 
-            this.cpuTypeTextBox.Location = new System.Drawing.Point(102, 278);
+            this.cpuTypeTextBox.Enabled = false;
+            this.cpuTypeTextBox.Location = new System.Drawing.Point(100, 288);
             this.cpuTypeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.cpuTypeTextBox.Name = "cpuTypeTextBox";
-            this.cpuTypeTextBox.Size = new System.Drawing.Size(96, 31);
+            this.cpuTypeTextBox.Size = new System.Drawing.Size(89, 26);
             this.cpuTypeTextBox.TabIndex = 1;
             // 
             // cpuBrandLabel
             // 
             this.cpuBrandLabel.AutoSize = true;
             this.cpuBrandLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpuBrandLabel.Location = new System.Drawing.Point(9, 231);
+            this.cpuBrandLabel.Location = new System.Drawing.Point(12, 238);
             this.cpuBrandLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cpuBrandLabel.Name = "cpuBrandLabel";
             this.cpuBrandLabel.Size = new System.Drawing.Size(89, 20);
@@ -435,17 +449,18 @@
             // 
             // cpuBrandTextBox
             // 
-            this.cpuBrandTextBox.Location = new System.Drawing.Point(102, 228);
+            this.cpuBrandTextBox.Enabled = false;
+            this.cpuBrandTextBox.Location = new System.Drawing.Point(100, 232);
             this.cpuBrandTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.cpuBrandTextBox.Name = "cpuBrandTextBox";
-            this.cpuBrandTextBox.Size = new System.Drawing.Size(96, 31);
+            this.cpuBrandTextBox.Size = new System.Drawing.Size(89, 26);
             this.cpuBrandTextBox.TabIndex = 1;
             // 
             // memoryLabel
             // 
             this.memoryLabel.AutoSize = true;
             this.memoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.memoryLabel.Location = new System.Drawing.Point(29, 175);
+            this.memoryLabel.Location = new System.Drawing.Point(20, 182);
             this.memoryLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.memoryLabel.Name = "memoryLabel";
             this.memoryLabel.Size = new System.Drawing.Size(65, 20);
@@ -454,17 +469,18 @@
             // 
             // memoryTextBox
             // 
-            this.memoryTextBox.Location = new System.Drawing.Point(102, 172);
+            this.memoryTextBox.Enabled = false;
+            this.memoryTextBox.Location = new System.Drawing.Point(100, 176);
             this.memoryTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.memoryTextBox.Name = "memoryTextBox";
-            this.memoryTextBox.Size = new System.Drawing.Size(96, 31);
+            this.memoryTextBox.Size = new System.Drawing.Size(89, 26);
             this.memoryTextBox.TabIndex = 1;
             // 
             // priceLabel
             // 
             this.priceLabel.AutoSize = true;
             this.priceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceLabel.Location = new System.Drawing.Point(-1, 31);
+            this.priceLabel.Location = new System.Drawing.Point(91, 21);
             this.priceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.priceLabel.Name = "priceLabel";
             this.priceLabel.Size = new System.Drawing.Size(44, 20);
@@ -473,17 +489,21 @@
             // 
             // priceTextBox
             // 
-            this.priceTextBox.Location = new System.Drawing.Point(125, 24);
+            this.priceTextBox.Enabled = false;
+            this.priceTextBox.Location = new System.Drawing.Point(166, 16);
             this.priceTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.priceTextBox.Name = "priceTextBox";
-            this.priceTextBox.Size = new System.Drawing.Size(96, 31);
+            this.priceTextBox.Size = new System.Drawing.Size(73, 26);
             this.priceTextBox.TabIndex = 1;
             // 
             // computerPictureBox
             // 
-            this.computerPictureBox.Location = new System.Drawing.Point(51, 38);
+            this.computerPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.computerPictureBox.Location = new System.Drawing.Point(38, 30);
+            this.computerPictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.computerPictureBox.Name = "computerPictureBox";
-            this.computerPictureBox.Size = new System.Drawing.Size(185, 95);
+            this.computerPictureBox.Size = new System.Drawing.Size(186, 116);
+            this.computerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.computerPictureBox.TabIndex = 4;
             this.computerPictureBox.TabStop = false;
             // 
@@ -496,9 +516,11 @@
             this.priceGroupBox.Controls.Add(this.priceLabel);
             this.priceGroupBox.Controls.Add(this.priceTextBox);
             this.priceGroupBox.Controls.Add(this.shapeContainer1);
-            this.priceGroupBox.Location = new System.Drawing.Point(272, 33);
+            this.priceGroupBox.Location = new System.Drawing.Point(309, 30);
+            this.priceGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.priceGroupBox.Name = "priceGroupBox";
-            this.priceGroupBox.Size = new System.Drawing.Size(426, 100);
+            this.priceGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.priceGroupBox.Size = new System.Drawing.Size(437, 102);
             this.priceGroupBox.TabIndex = 5;
             this.priceGroupBox.TabStop = false;
             this.priceGroupBox.Text = "Price";
@@ -507,7 +529,7 @@
             // 
             this.totalCostLabel.AutoSize = true;
             this.totalCostLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalCostLabel.Location = new System.Drawing.Point(240, 62);
+            this.totalCostLabel.Location = new System.Drawing.Point(277, 44);
             this.totalCostLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalCostLabel.Name = "totalCostLabel";
             this.totalCostLabel.Size = new System.Drawing.Size(81, 20);
@@ -516,17 +538,18 @@
             // 
             // totalCostTextBox
             // 
-            this.totalCostTextBox.Location = new System.Drawing.Point(325, 55);
+            this.totalCostTextBox.Enabled = false;
+            this.totalCostTextBox.Location = new System.Drawing.Point(362, 38);
             this.totalCostTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.totalCostTextBox.Name = "totalCostTextBox";
-            this.totalCostTextBox.Size = new System.Drawing.Size(96, 31);
+            this.totalCostTextBox.Size = new System.Drawing.Size(73, 26);
             this.totalCostTextBox.TabIndex = 1;
             // 
             // salesTaxabel
             // 
             this.salesTaxabel.AutoSize = true;
             this.salesTaxabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salesTaxabel.Location = new System.Drawing.Point(-1, 66);
+            this.salesTaxabel.Location = new System.Drawing.Point(20, 69);
             this.salesTaxabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.salesTaxabel.Name = "salesTaxabel";
             this.salesTaxabel.Size = new System.Drawing.Size(124, 20);
@@ -535,50 +558,52 @@
             // 
             // salesTaxTextBox
             // 
-            this.salesTaxTextBox.Location = new System.Drawing.Point(125, 59);
+            this.salesTaxTextBox.Enabled = false;
+            this.salesTaxTextBox.Location = new System.Drawing.Point(166, 66);
             this.salesTaxTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.salesTaxTextBox.Name = "salesTaxTextBox";
-            this.salesTaxTextBox.Size = new System.Drawing.Size(96, 31);
+            this.salesTaxTextBox.Size = new System.Drawing.Size(73, 26);
             this.salesTaxTextBox.TabIndex = 1;
             // 
             // shapeContainer1
             // 
-            this.shapeContainer1.Location = new System.Drawing.Point(3, 27);
+            this.shapeContainer1.Location = new System.Drawing.Point(2, 21);
             this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(420, 70);
+            this.shapeContainer1.Size = new System.Drawing.Size(433, 79);
             this.shapeContainer1.TabIndex = 2;
             this.shapeContainer1.TabStop = false;
             // 
             // lineShape1
             // 
             this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 230;
-            this.lineShape1.X2 = 230;
-            this.lineShape1.Y1 = -6;
-            this.lineShape1.Y2 = 68;
+            this.lineShape1.X1 = 265;
+            this.lineShape1.X2 = 265;
+            this.lineShape1.Y1 = -3;
+            this.lineShape1.Y2 = 71;
             // 
             // finishButton
             // 
             this.finishButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.finishButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.finishButton.ForeColor = System.Drawing.Color.White;
-            this.finishButton.Location = new System.Drawing.Point(571, 509);
+            this.finishButton.Location = new System.Drawing.Point(600, 509);
             this.finishButton.Margin = new System.Windows.Forms.Padding(2);
             this.finishButton.Name = "finishButton";
             this.finishButton.Size = new System.Drawing.Size(157, 41);
             this.finishButton.TabIndex = 6;
             this.finishButton.Text = "Finish";
             this.finishButton.UseVisualStyleBackColor = false;
+            this.finishButton.Click += new System.EventHandler(this.finishButton_Click);
             // 
             // backButton
             // 
             this.backButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.ForeColor = System.Drawing.Color.White;
-            this.backButton.Location = new System.Drawing.Point(33, 509);
+            this.backButton.Location = new System.Drawing.Point(38, 509);
             this.backButton.Margin = new System.Windows.Forms.Padding(2);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(157, 41);
@@ -592,7 +617,7 @@
             this.cancelButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelButton.ForeColor = System.Drawing.Color.White;
-            this.cancelButton.Location = new System.Drawing.Point(216, 509);
+            this.cancelButton.Location = new System.Drawing.Point(210, 509);
             this.cancelButton.Margin = new System.Windows.Forms.Padding(2);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(157, 41);
@@ -603,8 +628,9 @@
             // 
             // OrderForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.ControlBox = false;
             this.Controls.Add(this.cancelButton);
@@ -614,12 +640,13 @@
             this.Controls.Add(this.computerPictureBox);
             this.Controls.Add(this.computerSpecsGroupBox);
             this.Controls.Add(this.menuStrip1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "OrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dollar Computers";
+            this.Activated += new System.EventHandler(this.OrderForm_Activated);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.computerSpecsGroupBox.ResumeLayout(false);

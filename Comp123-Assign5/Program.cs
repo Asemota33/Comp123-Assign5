@@ -33,6 +33,7 @@ namespace Comp123_Assign5
             selectForm = new SelectForm();
             splashScreen = new SplashScreen();
             startForm = new StartForm();
+            aboutForm = new AboutForm();
 
             product = new Product();
 
