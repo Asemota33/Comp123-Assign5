@@ -27,5 +27,10 @@ namespace Comp123_Assign5
             Program.productInfoForm.Show();
             this.Hide();
         }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

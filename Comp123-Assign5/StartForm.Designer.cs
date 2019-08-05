@@ -30,9 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
             this.startButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.loadOldFormButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.startFormOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,17 +50,18 @@
             this.startButton.UseVisualStyleBackColor = false;
             this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
-            // button1
+            // loadOldFormButton
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(227, 346);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(333, 76);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Load Old Form";
-            this.button1.UseVisualStyleBackColor = false;
+            this.loadOldFormButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.loadOldFormButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loadOldFormButton.ForeColor = System.Drawing.Color.White;
+            this.loadOldFormButton.Location = new System.Drawing.Point(227, 346);
+            this.loadOldFormButton.Name = "loadOldFormButton";
+            this.loadOldFormButton.Size = new System.Drawing.Size(333, 76);
+            this.loadOldFormButton.TabIndex = 0;
+            this.loadOldFormButton.Text = "Load Old Form";
+            this.loadOldFormButton.UseVisualStyleBackColor = false;
+            this.loadOldFormButton.Click += new System.EventHandler(this.loadOldFormButton_Click);
             // 
             // exitButton
             // 
@@ -85,6 +87,10 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // startFormOpenFileDialog
+            // 
+            this.startFormOpenFileDialog.FileName = "openFileDialog1";
+            // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -94,7 +100,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.exitButton);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.loadOldFormButton);
             this.Controls.Add(this.startButton);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(7);
@@ -112,9 +118,10 @@
         #endregion
 
         private System.Windows.Forms.Button startButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button loadOldFormButton;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.OpenFileDialog startFormOpenFileDialog;
     }
 }
 

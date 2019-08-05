@@ -72,6 +72,8 @@
             this.selectAnotherProductButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.nextButton = new System.Windows.Forms.Button();
+            this.productOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.productSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip1.SuspendLayout();
             this.productInfoGroupBox.SuspendLayout();
             this.computerSpecsGroupBox.SuspendLayout();
@@ -102,14 +104,16 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.openToolStripMenuItem.Text = "&Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.saveToolStripMenuItem.Text = "&Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -441,9 +445,9 @@
             this.hddLabel.Location = new System.Drawing.Point(432, 156);
             this.hddLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hddLabel.Name = "hddLabel";
-            this.hddLabel.Size = new System.Drawing.Size(88, 20);
+            this.hddLabel.Size = new System.Drawing.Size(49, 20);
             this.hddLabel.TabIndex = 0;
-            this.hddLabel.Text = "HDD Label";
+            this.hddLabel.Text = "HDD ";
             // 
             // cpuTypeTextBox
             // 
@@ -533,6 +537,10 @@
             this.nextButton.UseVisualStyleBackColor = false;
             this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
+            // productOpenFileDialog
+            // 
+            this.productOpenFileDialog.FileName = "openFileDialog1";
+            // 
             // ProductInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -551,6 +559,7 @@
             this.Name = "ProductInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dollar Computers";
+            this.Activated += new System.EventHandler(this.productInfoForm_activated);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.productInfoGroupBox.ResumeLayout(false);
@@ -608,5 +617,7 @@
         private System.Windows.Forms.Button selectAnotherProductButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button nextButton;
+        private System.Windows.Forms.OpenFileDialog productOpenFileDialog;
+        private System.Windows.Forms.SaveFileDialog productSaveFileDialog;
     }
 }

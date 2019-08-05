@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,14 +42,14 @@
             this.conditionTextBox = new System.Windows.Forms.TextBox();
             this.modelLabel = new System.Windows.Forms.Label();
             this.modelTextBox = new System.Windows.Forms.TextBox();
+            this.lcdSizeLabel = new System.Windows.Forms.Label();
+            this.lcdSizeTextBox = new System.Windows.Forms.TextBox();
             this.osLabel = new System.Windows.Forms.Label();
             this.manufacturerLabel = new System.Windows.Forms.Label();
             this.conditionLabel = new System.Windows.Forms.Label();
             this.manufacturerTextBox = new System.Windows.Forms.TextBox();
             this.platformTextBox = new System.Windows.Forms.TextBox();
             this.platformLabel = new System.Windows.Forms.Label();
-            this.priceLabel = new System.Windows.Forms.Label();
-            this.priceTextBox = new System.Windows.Forms.TextBox();
             this.cpuNumberLabel = new System.Windows.Forms.Label();
             this.cpuNumberTextBox = new System.Windows.Forms.TextBox();
             this.webcamTextBox = new System.Windows.Forms.TextBox();
@@ -65,14 +66,16 @@
             this.cpuBrandTextBox = new System.Windows.Forms.TextBox();
             this.memoryLabel = new System.Windows.Forms.Label();
             this.memoryTextBox = new System.Windows.Forms.TextBox();
+            this.priceLabel = new System.Windows.Forms.Label();
+            this.priceTextBox = new System.Windows.Forms.TextBox();
             this.computerPictureBox = new System.Windows.Forms.PictureBox();
             this.priceGroupBox = new System.Windows.Forms.GroupBox();
-            this.salesTaxTextBox = new System.Windows.Forms.TextBox();
-            this.salesTaxabel = new System.Windows.Forms.Label();
-            this.totalCostTextBox = new System.Windows.Forms.TextBox();
             this.totalCostLabel = new System.Windows.Forms.Label();
-            this.lcdSizeTextBox = new System.Windows.Forms.TextBox();
-            this.lcdSizeLabel = new System.Windows.Forms.Label();
+            this.totalCostTextBox = new System.Windows.Forms.TextBox();
+            this.salesTaxabel = new System.Windows.Forms.Label();
+            this.salesTaxTextBox = new System.Windows.Forms.TextBox();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.finishButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
@@ -98,6 +101,7 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.printToolStripMenuItem,
+            this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -108,11 +112,17 @@
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
             this.printToolStripMenuItem.Text = "&Print";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(96, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.cancelButton_Click);
             // 
@@ -127,7 +137,7 @@
             // backToolStripMenuItem
             // 
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
             this.backToolStripMenuItem.Text = "&Back";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.backButton_Click);
             // 
@@ -219,6 +229,25 @@
             this.modelTextBox.Size = new System.Drawing.Size(357, 31);
             this.modelTextBox.TabIndex = 9;
             // 
+            // lcdSizeLabel
+            // 
+            this.lcdSizeLabel.AutoSize = true;
+            this.lcdSizeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lcdSizeLabel.Location = new System.Drawing.Point(235, 178);
+            this.lcdSizeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lcdSizeLabel.Name = "lcdSizeLabel";
+            this.lcdSizeLabel.Size = new System.Drawing.Size(76, 20);
+            this.lcdSizeLabel.TabIndex = 0;
+            this.lcdSizeLabel.Text = "LCD Size";
+            // 
+            // lcdSizeTextBox
+            // 
+            this.lcdSizeTextBox.Location = new System.Drawing.Point(315, 175);
+            this.lcdSizeTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.lcdSizeTextBox.Name = "lcdSizeTextBox";
+            this.lcdSizeTextBox.Size = new System.Drawing.Size(96, 31);
+            this.lcdSizeTextBox.TabIndex = 1;
+            // 
             // osLabel
             // 
             this.osLabel.AutoSize = true;
@@ -278,25 +307,6 @@
             this.platformLabel.Size = new System.Drawing.Size(68, 20);
             this.platformLabel.TabIndex = 6;
             this.platformLabel.Text = "Platform";
-            // 
-            // priceLabel
-            // 
-            this.priceLabel.AutoSize = true;
-            this.priceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceLabel.Location = new System.Drawing.Point(12, 27);
-            this.priceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.priceLabel.Name = "priceLabel";
-            this.priceLabel.Size = new System.Drawing.Size(44, 20);
-            this.priceLabel.TabIndex = 0;
-            this.priceLabel.Text = "Price";
-            // 
-            // priceTextBox
-            // 
-            this.priceTextBox.Location = new System.Drawing.Point(140, 24);
-            this.priceTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.priceTextBox.Name = "priceTextBox";
-            this.priceTextBox.Size = new System.Drawing.Size(96, 31);
-            this.priceTextBox.TabIndex = 1;
             // 
             // cpuNumberLabel
             // 
@@ -450,6 +460,25 @@
             this.memoryTextBox.Size = new System.Drawing.Size(96, 31);
             this.memoryTextBox.TabIndex = 1;
             // 
+            // priceLabel
+            // 
+            this.priceLabel.AutoSize = true;
+            this.priceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.priceLabel.Location = new System.Drawing.Point(-1, 31);
+            this.priceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.priceLabel.Name = "priceLabel";
+            this.priceLabel.Size = new System.Drawing.Size(44, 20);
+            this.priceLabel.TabIndex = 0;
+            this.priceLabel.Text = "Price";
+            // 
+            // priceTextBox
+            // 
+            this.priceTextBox.Location = new System.Drawing.Point(125, 24);
+            this.priceTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.priceTextBox.Name = "priceTextBox";
+            this.priceTextBox.Size = new System.Drawing.Size(96, 31);
+            this.priceTextBox.TabIndex = 1;
+            // 
             // computerPictureBox
             // 
             this.computerPictureBox.Location = new System.Drawing.Point(51, 38);
@@ -466,39 +495,13 @@
             this.priceGroupBox.Controls.Add(this.salesTaxTextBox);
             this.priceGroupBox.Controls.Add(this.priceLabel);
             this.priceGroupBox.Controls.Add(this.priceTextBox);
+            this.priceGroupBox.Controls.Add(this.shapeContainer1);
             this.priceGroupBox.Location = new System.Drawing.Point(272, 33);
             this.priceGroupBox.Name = "priceGroupBox";
             this.priceGroupBox.Size = new System.Drawing.Size(426, 100);
             this.priceGroupBox.TabIndex = 5;
             this.priceGroupBox.TabStop = false;
             this.priceGroupBox.Text = "Price";
-            // 
-            // salesTaxTextBox
-            // 
-            this.salesTaxTextBox.Location = new System.Drawing.Point(140, 59);
-            this.salesTaxTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.salesTaxTextBox.Name = "salesTaxTextBox";
-            this.salesTaxTextBox.Size = new System.Drawing.Size(96, 31);
-            this.salesTaxTextBox.TabIndex = 1;
-            // 
-            // salesTaxabel
-            // 
-            this.salesTaxabel.AutoSize = true;
-            this.salesTaxabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salesTaxabel.Location = new System.Drawing.Point(12, 62);
-            this.salesTaxabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.salesTaxabel.Name = "salesTaxabel";
-            this.salesTaxabel.Size = new System.Drawing.Size(124, 20);
-            this.salesTaxabel.TabIndex = 0;
-            this.salesTaxabel.Text = "Sales Tax(13%) ";
-            // 
-            // totalCostTextBox
-            // 
-            this.totalCostTextBox.Location = new System.Drawing.Point(325, 55);
-            this.totalCostTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.totalCostTextBox.Name = "totalCostTextBox";
-            this.totalCostTextBox.Size = new System.Drawing.Size(96, 31);
-            this.totalCostTextBox.TabIndex = 1;
             // 
             // totalCostLabel
             // 
@@ -511,24 +514,51 @@
             this.totalCostLabel.TabIndex = 0;
             this.totalCostLabel.Text = "Total Cost";
             // 
-            // lcdSizeTextBox
+            // totalCostTextBox
             // 
-            this.lcdSizeTextBox.Location = new System.Drawing.Point(315, 175);
-            this.lcdSizeTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.lcdSizeTextBox.Name = "lcdSizeTextBox";
-            this.lcdSizeTextBox.Size = new System.Drawing.Size(96, 31);
-            this.lcdSizeTextBox.TabIndex = 1;
+            this.totalCostTextBox.Location = new System.Drawing.Point(325, 55);
+            this.totalCostTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.totalCostTextBox.Name = "totalCostTextBox";
+            this.totalCostTextBox.Size = new System.Drawing.Size(96, 31);
+            this.totalCostTextBox.TabIndex = 1;
             // 
-            // lcdSizeLabel
+            // salesTaxabel
             // 
-            this.lcdSizeLabel.AutoSize = true;
-            this.lcdSizeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lcdSizeLabel.Location = new System.Drawing.Point(235, 178);
-            this.lcdSizeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lcdSizeLabel.Name = "lcdSizeLabel";
-            this.lcdSizeLabel.Size = new System.Drawing.Size(76, 20);
-            this.lcdSizeLabel.TabIndex = 0;
-            this.lcdSizeLabel.Text = "LCD Size";
+            this.salesTaxabel.AutoSize = true;
+            this.salesTaxabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesTaxabel.Location = new System.Drawing.Point(-1, 66);
+            this.salesTaxabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.salesTaxabel.Name = "salesTaxabel";
+            this.salesTaxabel.Size = new System.Drawing.Size(124, 20);
+            this.salesTaxabel.TabIndex = 0;
+            this.salesTaxabel.Text = "Sales Tax(13%) ";
+            // 
+            // salesTaxTextBox
+            // 
+            this.salesTaxTextBox.Location = new System.Drawing.Point(125, 59);
+            this.salesTaxTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.salesTaxTextBox.Name = "salesTaxTextBox";
+            this.salesTaxTextBox.Size = new System.Drawing.Size(96, 31);
+            this.salesTaxTextBox.TabIndex = 1;
+            // 
+            // shapeContainer1
+            // 
+            this.shapeContainer1.Location = new System.Drawing.Point(3, 27);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape1});
+            this.shapeContainer1.Size = new System.Drawing.Size(420, 70);
+            this.shapeContainer1.TabIndex = 2;
+            this.shapeContainer1.TabStop = false;
+            // 
+            // lineShape1
+            // 
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = 230;
+            this.lineShape1.X2 = 230;
+            this.lineShape1.Y1 = -6;
+            this.lineShape1.Y2 = 68;
             // 
             // finishButton
             // 
@@ -652,5 +682,8 @@
         private System.Windows.Forms.Button finishButton;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Button cancelButton;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
     }
 }
