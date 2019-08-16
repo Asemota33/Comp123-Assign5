@@ -8,7 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/*
+ * Name: Michael Asemota
+ * App Name: Dollar Computers
+ * App Creation Date: 8/16/2019
+ * Student #: 301052117
+ * Description: This form prompts the user o add a new form or load an old one
+ */
 namespace Comp123_Assign5
 {
     public partial class StartForm : Form
@@ -17,23 +23,40 @@ namespace Comp123_Assign5
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Event handler for the form closing event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void StartForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
-
+        /// <summary>
+        /// Event handler for the start button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void startButton_Click(object sender, EventArgs e)
         {
             Program.selectForm.Show();
             this.Hide();
         }
-
+        /// <summary>
+        /// Event handler for the exit button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        /// <summary>
+        /// This event handler loads a saved text file and 
+        /// sends the information to an instance of the products form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void loadOldFormButton_Click(object sender, EventArgs e)
         {
             // configure the file dialogue

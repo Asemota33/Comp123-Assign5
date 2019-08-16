@@ -71,7 +71,7 @@
             this.exitButton = new System.Windows.Forms.Button();
             this.nextButton = new System.Windows.Forms.Button();
             this.productsTableAdapter = new Comp123_Assign5.DollarComputersDataSet1TableAdapters.productsTableAdapter();
-            this.selectionLabel = new System.Windows.Forms.Label();
+            this.selectionTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dollarComputersDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
@@ -521,14 +521,14 @@
             // 
             this.productsTableAdapter.ClearBeforeFill = true;
             // 
-            // selectionLabel
+            // selectionTextBox
             // 
-            this.selectionLabel.BackColor = System.Drawing.Color.White;
-            this.selectionLabel.Location = new System.Drawing.Point(9, 438);
-            this.selectionLabel.Name = "selectionLabel";
-            this.selectionLabel.Size = new System.Drawing.Size(764, 40);
-            this.selectionLabel.TabIndex = 5;
-            this.selectionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.selectionTextBox.Location = new System.Drawing.Point(12, 441);
+            this.selectionTextBox.Name = "selectionTextBox";
+            this.selectionTextBox.ReadOnly = true;
+            this.selectionTextBox.Size = new System.Drawing.Size(760, 29);
+            this.selectionTextBox.TabIndex = 5;
+            this.selectionTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // SelectForm
             // 
@@ -537,7 +537,7 @@
             this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.ControlBox = false;
-            this.Controls.Add(this.selectionLabel);
+            this.Controls.Add(this.selectionTextBox);
             this.Controls.Add(this.nextButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.choiceLabel);
@@ -573,7 +573,6 @@
         private DollarComputersDataSet1 dollarComputersDataSet1;
         private System.Windows.Forms.BindingSource productsBindingSource;
         private DollarComputersDataSet1TableAdapters.productsTableAdapter productsTableAdapter;
-        private System.Windows.Forms.Label selectionLabel;
         private System.Windows.Forms.BindingSource productBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn productIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
@@ -606,5 +605,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mousttypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn powerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn webcamDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox selectionTextBox;
     }
 }

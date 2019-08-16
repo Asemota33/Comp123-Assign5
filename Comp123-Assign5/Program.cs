@@ -5,6 +5,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * Name: Michael Asemota
+ * App Name: Dollar Computers
+ * App Creation Date: 8/16/2019
+ * Student #: 301052117
+ * Description: This file is where the all the forms are instantiated  
+ */
+
 namespace Comp123_Assign5
 {
      public static class Program
@@ -14,7 +22,6 @@ namespace Comp123_Assign5
         public static SelectForm selectForm;
         public static ProductInfoForm productInfoForm;
         public static OrderForm orderForm;
-        public static ProductClass productClass;
         public static AboutForm aboutForm;
 
         public static Product product;
@@ -27,7 +34,6 @@ namespace Comp123_Assign5
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            productClass = new ProductClass();
             orderForm = new OrderForm();
             productInfoForm = new ProductInfoForm();
             selectForm = new SelectForm();

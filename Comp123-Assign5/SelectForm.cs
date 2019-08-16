@@ -10,6 +10,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * Name: Michael Asemota
+ * App Name: Dollar Computers
+ * App Creation Date: 8/16/2019
+ * Student #: 301052117
+ * Description: This form displays the information 
+ * from our database and allows the user to select which item to purchase.
+ */
 namespace Comp123_Assign5
 {
     public partial class SelectForm : Form
@@ -18,27 +26,44 @@ namespace Comp123_Assign5
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Form closing event handler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
-
+        /// <summary>
+        /// Exit button event handler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void exitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        /// <summary>
+        /// Next button event handler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void nextButton_Click(object sender, EventArgs e)
         {
             Program.productInfoForm.Show();
             this.Hide();
         }
-
+        /// <summary>
+        /// This event handler loads the product database with the products 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dollarComputersDataSet1.products' table. You can move, or remove it, as needed.
             //this.productsTableAdapter.Fill(this.dollarComputersDataSet1.products);
+
 
             using (var db = new ProductModel())
             {
@@ -46,7 +71,8 @@ namespace Comp123_Assign5
                 productBindingSource.DataSource = db.products.Local.ToBindingList();
             }
 
-            if (selectionLabel.Text != string.Empty)
+            // Enables next button if a row is selected
+            if (selectionTextBox.Text != string.Empty)
             {
                 nextButton.Enabled = true;
             }
@@ -56,6 +82,11 @@ namespace Comp123_Assign5
             }
         }
 
+        /// <summary>
+        /// This method formats the selected item in a textbox as well 
+        /// as populates the product properties with information
+        /// </summary>
+        /// <returns></returns>
         public string ProductDataGridViewSelectedItem()
         {
             var rowIndex = dollarComputersDataGridView.CurrentCell.RowIndex;
@@ -91,9 +122,14 @@ namespace Comp123_Assign5
 
             return outputString;
         }
+        /// <summary>
+        /// This method displays formated information inside a textbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dollarComputersDataGridView_SelectionChanged(object sender, EventArgs e)
         {
-            selectionLabel.Text = ProductDataGridViewSelectedItem();
+            selectionTextBox.Text = ProductDataGridViewSelectedItem();
 
         }
     }

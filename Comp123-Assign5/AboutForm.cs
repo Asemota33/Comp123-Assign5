@@ -6,7 +6,11 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/*
+ * Name: Michael Asemota
+ * Student #: 301052117
+ * Description: This form displays the information on the about box
+ */
 namespace Comp123_Assign5
 {
     public partial class AboutForm : Form

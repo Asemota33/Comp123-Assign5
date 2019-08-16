@@ -5,7 +5,13 @@ namespace Comp123_Assign5.Model
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
-
+    /*
+  * Name: Michael Asemota
+  * App Name: Dollar Computers
+  * App Creation Date: 8/16/2019
+  * Student #: 301052117
+  * Description: This form holds the types of the fields in our database
+  */
     public partial class Product
     {
         public short productID { get; set; }

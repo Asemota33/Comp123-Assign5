@@ -8,7 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/*
+ * Name: Michael Asemota
+ * App Name: Dollar Computers
+ * App Creation Date: 8/16/2019
+ * Student #: 301052117
+ * Description: This form displays the information 
+ * selected from the database table in the selected form 
+ */
 namespace Comp123_Assign5
 {
  
@@ -18,59 +25,62 @@ namespace Comp123_Assign5
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Event handler for the select abother product button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void selectAnotherProductButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             Program.selectForm.Show();
         }
-
+        /// <summary>
+        /// Event handler for the cancel button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        /// <summary>
+        /// Event handler for the next button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void nextButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             Program.orderForm.Show();
         }
 
+        /// <summary>
+        /// Fills up the forms labels with information form the product object
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void productInfoForm_activated(object sender, EventArgs e)
         {
 
-            productIdTextBox.Text = Convert.ToString(Program.product.productID);
-            costTextBox.Text = Convert.ToString(Program.product.cost);
-            manufacturerTextBox.Text = Program.product.manufacturer;
-            modelTextBox.Text = Program.product.model;
-            memoryTextBox.Text = Program.product.RAM_size;
-            lcdSizeTextBox.Text = Program.product.screensize;
-            cpuBrandTextBox.Text = Program.product.CPU_brand;
-            cpuTypeTextBox.Text = Program.product.CPU_type;
-            cpuSpeedTextBox.Text = Program.product.CPU_speed;
-            cpuNumberTextBox.Text = Program.product.CPU_number;
-            conditionTextBox.Text = Program.product.condition;
-            osTextBox.Text = Program.product.OS;
-            platformTextBox.Text = Program.product.platform;
-            hddLabelTextBox.Text = Program.product.HDD_speed;
-            gpuTypeTextBox.Text = Program.product.GPU_Type;
-            webcamTextBox.Text = Program.product.webcam;
-            //ram.Text = Program.productClass.ramType 
-            //Program.productClass.displayType 
-            // Program.productClass.opticalDrive 
-            // Program.productClass.audioType 
-            // Program.productClass.lan 
-            // Program.productClass.wifi 
-            // Program.productClass.width 
-            //Program.productClass.height 
-            // Program.productClass.weight 
-            //Program.productClass.depth 
-            // Program.productClass.mouseType 
-            //Program.productClass.power 
-            //Program.productClass.hddSpeed 
-            // Program.productClass.resolution 
-            //Program.productClass.cpuClass 
-            if (productIdTextBox.Text != string.Empty)
+            productIdLabelData.Text = Convert.ToString(Program.product.productID);
+            costLabelData.Text = "$" + Convert.ToString(Math.Round((decimal)Program.product.cost, 2));
+            manufacturerLabelData.Text = Program.product.manufacturer;
+            modelLabelData.Text = Program.product.model;
+            memoryLabelData.Text = Program.product.RAM_size;
+            lcdSizeLabelData.Text = Program.product.screensize;
+            cpuBrandLabelData.Text = Program.product.CPU_brand;
+            cpuTypeLabelData.Text = Program.product.CPU_type;
+            cpuSpeedLabelData.Text = Program.product.CPU_speed;
+            cpuNumberLabelData.Text = Program.product.CPU_number;
+            conditionLabelData.Text = Program.product.condition;
+            osLabelData.Text = Program.product.OS;
+            platformLabelData.Text = Program.product.platform;
+            hddLabelData.Text = Program.product.HDD_speed;
+            gpuTypeLabelData.Text = Program.product.GPU_Type;
+            webcamLabelData.Text = Program.product.webcam;
+            
+            if (productIdLabelData.Text != string.Empty)
             {
                 nextButton.Enabled = true;
             }
@@ -80,6 +90,11 @@ namespace Comp123_Assign5
             }
         }
 
+        /// <summary>
+        /// Event handler that saves the information on the form to a text file
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // configure the file dialog
@@ -123,7 +138,12 @@ namespace Comp123_Assign5
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
+        /// <summary>
+        /// Event handler that opens a file on the users 
+        /// computer then displays its contents on the form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // configure the file dialogue
